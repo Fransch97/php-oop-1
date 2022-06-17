@@ -1,15 +1,41 @@
 <?php
 
-$film_data = $film->getAllData();
-$movie_data = $movie->getAllData();
+//EASY WAY
+// $film_data = $film->getAllData();
+// $movie_data = $movie->getAllData();
    
 ?>
     <main>
+        <!-- PERFORMANCE CODE -->
+        <?php foreach($films as $film): 
+            $film_data = $film->getAllData();
+        ?>
         <div class="movie">
             <h2><?php echo $film->getTitle()?></h2>
             <ul>
             <li>Genere: 
-                <?php foreach($film_data['genre'] as $genre){echo $genre;} ?>
+                <?php foreach($film_data['genre'] as $genre){echo $genre.', ';} ?>
+            </li>
+            <li>Data: <?php echo $film_data['release_date']?></li>
+
+            <?php if($film_data['actors']):?>
+                <li>Attori: <?php foreach($film_data['actors'] as $actor){echo $actor;} ?></li>
+            <?php endif; ?>
+
+            <li>Studio: <?php echo $film_data['studio']?></li>
+            <li>Like: <?php echo $film_data['likes']?></li>
+            </ul>
+        </div>
+        <?php endforeach;?>
+
+        
+
+         <!-- EASY WAY -->
+        <!-- <div class="movie">
+            <h2><?php echo $film->getTitle()?></h2>
+            <ul>
+            <li>Genere: 
+            <?php foreach($film_data['genre'] as $genre){echo $genre;} ?>
             </li>
             <li>Data: <?php echo $film_data['release_date']?></li>
 
@@ -37,6 +63,7 @@ $movie_data = $movie->getAllData();
             <li>Studio: <?php echo $movie_data['studio']?></li>
             <li>Like: <?php echo $movie_data['likes']?></li>
             </ul>
-        </div>
+        </div> -->
+        
         
     </main>
