@@ -4,11 +4,11 @@
     
     $titolo1 = 'Giustizia privata';
     $genre1 = ['Thriller'];
-    $release_date1 = '12009/10/16';
+    $release_date1 = '2009/10/16';
     $studio1 = 'Moviemax';
 
     
-    $titolo2 = 'Vendetta privata';
+    $titolo2 = 'Ex_machina';
     $genre2 = ['Science fiction', 'Drama'];
     $release_date2 = '2015/07/30';
     $studio2 = 'Universal Pictures';
