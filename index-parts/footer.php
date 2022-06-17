@@ -5,7 +5,7 @@
 
 ?>
     <footer>
-        <h1>footer</h1>
+        <p>By movie data</p>
     </footer>
 </body>
 </html>

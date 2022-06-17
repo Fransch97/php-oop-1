@@ -6,5 +6,5 @@
 ?>
 <body>
     <header>
-        <h1>header</h1>
+        <h1>Movie</h1>
     </header>
